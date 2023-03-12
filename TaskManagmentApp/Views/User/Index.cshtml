@@ -1,0 +1,47 @@
+﻿@using TaskManagmentApp.DAL.ViewModels.User
+@model List<UserViewModel>
+<div class="container-fluid p-0">
+    <h2 class="ps-2"> List of users</h2>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="ps-2 nav-item">
+                    <a class="btn btn-primary" asp-controller="user" asp-action="create">Add New User</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
+                <th>Monthly Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in @Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>@user.DateOfBirth</td>
+                    <td>@user.MonthlySalary BGN</td>
+                    <td>
+                        <a asp-action="edit" asp-controller="user" asp-route-id="@user.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="delete" asp-controller="user" asp-route-id="@user.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

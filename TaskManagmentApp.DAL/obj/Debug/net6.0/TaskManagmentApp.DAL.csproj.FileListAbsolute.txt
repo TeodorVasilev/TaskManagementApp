@@ -1,0 +1,13 @@
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\bin\Debug\net6.0\TaskManagmentApp.DAL.deps.json
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\bin\Debug\net6.0\TaskManagmentApp.DAL.runtimeconfig.json
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\bin\Debug\net6.0\TaskManagmentApp.DAL.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\bin\Debug\net6.0\ref\TaskManagmentApp.DAL.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\bin\Debug\net6.0\TaskManagmentApp.DAL.pdb
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.AssemblyInfoInputs.cache
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.AssemblyInfo.cs
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\ref\TaskManagmentApp.DAL.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.pdb
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.genruntimeconfig.cache

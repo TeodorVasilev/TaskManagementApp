@@ -1,0 +1,58 @@
+﻿@using TaskManagmentApp.DAL.ViewModels.Home
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model HomeViewModel
+<div class="container">
+    <h1 class="my-4">Dashboard</h1>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Number of Employees</h5>
+                    <p class="card-text">@Model.UsersCount</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Number of Tasks</h5>
+                    <p class="card-text">@Model.AssignmentsCount</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Number of Tasks in Progress</h5>
+                    <p class="card-text">@Model.AssignmentsInProgressCount</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="my-4">Top 5 Employees with Most Completed Tasks in the Last Month</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Completed Tasks</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in @Model.Users)
+            {
+                <tr>
+                    <td>@user.Email</td>
+                    <td>@user.CompletedAssignments</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

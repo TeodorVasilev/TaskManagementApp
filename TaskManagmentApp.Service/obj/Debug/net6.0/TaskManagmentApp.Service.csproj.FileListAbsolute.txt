@@ -1,0 +1,15 @@
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\bin\Debug\net6.0\TaskManagmentApp.Service.deps.json
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\bin\Debug\net6.0\TaskManagmentApp.Service.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\bin\Debug\net6.0\ref\TaskManagmentApp.Service.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\bin\Debug\net6.0\TaskManagmentApp.Service.pdb
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.AssemblyInfoInputs.cache
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.AssemblyInfo.cs
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.csproj.CoreCompileInputs.cache
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\ref\TaskManagmentApp.Service.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.pdb
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\bin\Debug\net6.0\TaskManagmentApp.DAL.dll
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\bin\Debug\net6.0\TaskManagmentApp.DAL.pdb
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.csproj.AssemblyReference.cache
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.Service\obj\Debug\net6.0\TaskManagmentApp.Service.csproj.CopyComplete

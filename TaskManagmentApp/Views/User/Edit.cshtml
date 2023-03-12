@@ -1,0 +1,52 @@
+﻿@using TaskManagmentApp.DAL.ViewModels.User
+@model EditUserViewModel
+
+<div class="d-flex h-100 justify-content-center align-items-center mt-3">
+    <form class="w-50" method="post" asp-controller="user" asp-action="update" asp-route-id="@Model.Id">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" readonly class="form-control" id="id" name="id" placeholder="Enter Full Name" value="@Model.Id">
+        </div>
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control" id="fullname" name="name" placeholder="Enter Full Name" value="@Model.Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" value="@Model.Email">
+        </div>
+        <div class="form-group">
+            <label for="phonenumber">Phone Number</label>
+            <input type="tel" class="form-control" id="phonenumber" name="phonenumber" placeholder="Enter Phone Number" value="@Model.PhoneNumber">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="datetime-local" class="form-control" id="dob" name="dateofbirth" placeholder="Enter Date of Birth" value="@Model.DateOfBirth.ToString("s")">
+        </div>
+        <div class="form-group">
+            <label for="salary">Monthly Salary</label>
+            <input type="number" class="form-control" id="salary" name="monthlysalary" placeholder="Enter Monthly Salary" value="@Model.MonthlySalary">
+        </div>
+        <div class="form-group">
+            <label for="roles">Roles</label>
+            <select class="form-control" id="roles" name="role">
+                @foreach (var role in Model.Roles)
+                {
+                    if (@Model.Role == role)
+                    {
+                        <option selected value="@role">@role</option>
+                    }
+                    else
+                    {
+                        <option value="@role">@role</option>
+                    }
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Update User</button>
+        @if (!string.IsNullOrWhiteSpace(Context.Request.Query["message"]))
+        {
+            <div class="alert alert-danger mt-3">@Context.Request.Query["message"]</div>
+        }
+    </form>
+</div>

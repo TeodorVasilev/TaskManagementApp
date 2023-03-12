@@ -1,0 +1,38 @@
+﻿<div class="d-flex h-100 justify-content-center align-items-center mt-5">
+    <form class="w-50" method="post" asp-controller="user" asp-action="create">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control" id="fullname" name="name" placeholder="Enter Full Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="phonenumber">Phone Number</label>
+            <input type="tel" class="form-control" id="phonenumber" name="phonenumber" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" name="dateofbirth" placeholder="Enter Date of Birth">
+        </div>
+        <div class="form-group">
+            <label for="salary">Monthly Salary</label>
+            <input type="number" class="form-control" id="salary" name="monthlysalary" placeholder="Enter Monthly Salary">
+        </div>
+        <div class="form-group">
+            <label for="role">Role</label>
+            <select class="form-control" id="role" name="role">
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="manager">Manager</option>
+                <option value="employee">Employee</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Create User</button>
+        @if (!string.IsNullOrWhiteSpace(Context.Request.Query["message"]))
+        {
+            <div class="alert alert-danger mt-3">@Context.Request.Query["message"]</div>
+        }
+    </form>
+</div>

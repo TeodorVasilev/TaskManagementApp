@@ -1,0 +1,38 @@
+﻿@using TaskManagmentApp.DAL.ViewModels.User
+@model List<UserViewModel>
+
+<div class="d-flex h-100 justify-content-center align-items-center mt-5">
+    <form class="w-50" asp-action="create" asp-controller="assignment" method="post">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="dueDate">Due Date:</label>
+            <input type="datetime-local" class="form-control" id="dueDate" name="duedate">
+        </div>
+        <div class="form-group">
+            <label for="userId">User:</label>
+            <select class="form-control" id="userId" name="UserId">
+                @if (Model != null)
+                {
+                    @foreach (var user in @Model)
+                    {
+                        <option value="@user.Id">@user.Email</option>
+                    }
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        @if(!string.IsNullOrWhiteSpace(Context.Request.Query["message"]))
+        {
+            <div class="alert alert-danger mt-3">@Context.Request.Query["message"]</div>
+        }
+    </form>
+</div>
