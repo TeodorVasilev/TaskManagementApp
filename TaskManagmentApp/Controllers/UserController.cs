@@ -86,7 +86,7 @@ namespace TaskManagmentApp.Controllers
             }
             else
             {
-                return View();
+                return RedirectToAction("Index", "User", new { message = message });
             }
         }
     }

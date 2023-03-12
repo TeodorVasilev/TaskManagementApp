@@ -110,6 +110,11 @@ namespace TaskManagmentApp.DAL.Migrations
                         {
                             UserId = 1,
                             RoleId = 1
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            RoleId = 2
                         });
                 });
 
@@ -165,14 +170,14 @@ namespace TaskManagmentApp.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "566a8142-b60a-4e8f-b803-861779be5f85",
+                            ConcurrencyStamp = "5a5ac161-6acc-4b54-b6ff-c2ab7de8f290",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "dee85b14-fdb3-408d-883b-98b1d81ee04a",
+                            ConcurrencyStamp = "71b6fa03-2598-4c0e-a14e-1bf6e0345999",
                             Name = "Employee",
                             NormalizedName = "EMPLOYEE"
                         });
@@ -260,7 +265,7 @@ namespace TaskManagmentApp.DAL.Migrations
                         {
                             Id = 1,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7a67fb53-5b97-43df-8550-c3050546193a",
+                            ConcurrencyStamp = "1594191a-d7d4-4f5f-b88c-58da335a69ac",
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
@@ -269,11 +274,30 @@ namespace TaskManagmentApp.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN@ADMIN.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKKSPc4H0RosUSkjstrSC2WJmE4hxCwazMzODamVhZygBgIrCajQgQTkZtUJGIV+MA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL/kQn4vDIH+U5nKKyojJ6jEkrOlTr6E7oJ1uHI9nP/M/b4HAlJt+I14gboKQcg52g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "94968343-ef76-4bfe-b422-fd1c5045ad7f",
+                            SecurityStamp = "e448afeb-6cb0-4b4f-8483-74a9fd8fe506",
                             TwoFactorEnabled = false,
                             UserName = "admin@admin.com"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "84232b5e-9d84-4ca4-be95-2aff68fd3cb4",
+                            DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "employee@employee.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            MonthlySalary = 0m,
+                            Name = "Employee",
+                            NormalizedEmail = "EMPLOYEE@EMPLOYEE.COM",
+                            NormalizedUserName = "EMPLOYEE@EMPLOYEE.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJzavrTHxmBHeeMNT4SD/Yukx7+3QQHXXmCScgMerDakdRdMSz4iwb+s0SKEV+tpDQ==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "ec72198f-b4c7-49c9-bd75-e1985c971254",
+                            TwoFactorEnabled = false,
+                            UserName = "employee@employee.com"
                         });
                 });
 
@@ -313,6 +337,19 @@ namespace TaskManagmentApp.DAL.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Assignments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CompletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2023, 3, 12, 20, 29, 6, 687, DateTimeKind.Local).AddTicks(9172),
+                            Description = "TestAssignmentDescription",
+                            DueDate = new DateTime(2023, 3, 12, 21, 29, 6, 687, DateTimeKind.Local).AddTicks(9211),
+                            Status = 0,
+                            Title = "TestAssignment",
+                            UserId = 2
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

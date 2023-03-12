@@ -103,6 +103,11 @@ namespace TaskManagmentApp.Service.UserService
 
         public async Task<(bool, string)> Delete(int id)
         {
+            if(id == 1)
+            {
+                return (false, "Cannot delete the admin user");
+            }
+
             var user = this._context.Users.Where(u => u.Id == id).FirstOrDefault();
 
             var message = "Successfully deleted user!";
@@ -177,16 +182,23 @@ namespace TaskManagmentApp.Service.UserService
         {
             var users = await this.GetAllUsers();
 
-            var list = users.Select(u => new UserViewModel
-            {
-                Id = u.Id,
-                Name = u.Name,
-                Email = u.Email,
-                PhoneNumber = u.PhoneNumber,
-                DateOfBirth = u.DateOfBirth,
-                MonthlySalary = u.MonthlySalary,
+            var list = new List<UserViewModel>();
 
-            }).ToList();
+            foreach (var user in users)
+            {
+                var userViewModel = new UserViewModel
+                {
+                    Id = user.Id,
+                    Name = user.Name,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber,
+                    DateOfBirth = user.DateOfBirth,
+                    MonthlySalary = user.MonthlySalary,
+                    Role = (await _userManager.GetRolesAsync(user)).FirstOrDefault()
+                };
+
+                list.Add(userViewModel);
+            }
 
             return list;
         }

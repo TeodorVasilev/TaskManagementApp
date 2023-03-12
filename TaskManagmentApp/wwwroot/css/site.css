@@ -12,3 +12,11 @@ html {
   position: relative;
   min-height: 100%;
 }
+
+.description {
+    width: 200px;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: inline-block;
+}

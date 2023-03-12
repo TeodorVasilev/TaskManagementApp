@@ -5,9 +5,6 @@
     @if (User.IsInRole("Admin"))
     {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="ps-2 nav-item">
@@ -35,13 +32,17 @@
                 <tr>
                     <td>@assignment.Id</td>
                     <td>@assignment.Title</td>
-                    <td>@assignment.Description</td>
+                    <td><div class="description">@assignment.Description</div></td>
                     <td>@assignment.CreatedAt</td>
                     <td>@assignment.DueDate</td>
                     <td>@assignment.Status</td>
                     @if (@User.IsInRole("Admin"))
                     {
                         <td>
+                            @if (assignment.Status == 0)
+                            {
+                                <a asp-action="complete" asp-controller="assignment" asp-route-id="@assignment.Id" class="btn btn-success btn-sm">Complete</a>
+                            }
                             <a asp-action="edit" asp-controller="assignment" asp-route-id="@assignment.Id" class="btn btn-warning btn-sm">Edit</a>
                             <a asp-action="delete" asp-controller="assignment" asp-route-id="@assignment.Id" class="btn btn-danger btn-sm">Delete</a>
                         </td>

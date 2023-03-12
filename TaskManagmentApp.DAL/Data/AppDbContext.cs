@@ -68,6 +68,45 @@ namespace TaskManagmentApp.DAL.Data
                         RoleId = 1,
                     }
                 );
+
+            var employeeUser = new AppUser
+            {
+                Id = 2,
+                Email = "employee@employee.com",
+                NormalizedEmail = "EMPLOYEE@EMPLOYEE.COM",
+                EmailConfirmed = true,
+                UserName = "employee@employee.com",
+                NormalizedUserName = "EMPLOYEE@EMPLOYEE.COM",
+                Name = "Employee",
+                SecurityStamp = Guid.NewGuid().ToString(),
+            };
+
+            employeeUser.PasswordHash = ph.HashPassword(employeeUser, "Test123!");
+
+            modelBuilder.Entity<AppUser>().HasData(employeeUser);
+            modelBuilder.Entity<IdentityUserRole<int>>().HasData
+                (
+                    new IdentityUserRole<int>
+                    {
+                        UserId = 2,
+                        RoleId = 2,
+                    }
+                );
+
+            //seed assignment to the database
+            var assignment = new Assignment
+            {
+                Id = 1,
+                Title = "TestAssignment",
+                Description = "TestAssignmentDescription",
+                CreatedAt = DateTime.Now,
+                DueDate = DateTime.Now.AddHours(1),
+                CompletedAt = DateTime.MinValue,
+                Status = AssignmentStatus.InProgress,
+                UserId = 2
+            };
+
+            modelBuilder.Entity<Assignment>().HasData(assignment);
         }
     }
 }

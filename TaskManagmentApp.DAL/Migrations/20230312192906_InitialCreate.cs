@@ -187,22 +187,35 @@ namespace TaskManagmentApp.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { 1, "566a8142-b60a-4e8f-b803-861779be5f85", "Admin", "ADMIN" });
-
-            migrationBuilder.InsertData(
-                table: "AspNetRoles",
-                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { 2, "dee85b14-fdb3-408d-883b-98b1d81ee04a", "Employee", "EMPLOYEE" });
+                values: new object[,]
+                {
+                    { 1, "5a5ac161-6acc-4b54-b6ff-c2ab7de8f290", "Admin", "ADMIN" },
+                    { 2, "71b6fa03-2598-4c0e-a14e-1bf6e0345999", "Employee", "EMPLOYEE" }
+                });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "DateOfBirth", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "MonthlySalary", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { 1, 0, "7a67fb53-5b97-43df-8550-c3050546193a", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@admin.com", true, false, null, 0m, "Admin", "ADMIN@ADMIN.COM", "ADMIN@ADMIN.COM", "AQAAAAEAACcQAAAAEKKSPc4H0RosUSkjstrSC2WJmE4hxCwazMzODamVhZygBgIrCajQgQTkZtUJGIV+MA==", null, false, "94968343-ef76-4bfe-b422-fd1c5045ad7f", false, "admin@admin.com" });
+                values: new object[,]
+                {
+                    { 1, 0, "1594191a-d7d4-4f5f-b88c-58da335a69ac", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@admin.com", true, false, null, 0m, "Admin", "ADMIN@ADMIN.COM", "ADMIN@ADMIN.COM", "AQAAAAEAACcQAAAAEL/kQn4vDIH+U5nKKyojJ6jEkrOlTr6E7oJ1uHI9nP/M/b4HAlJt+I14gboKQcg52g==", null, false, "e448afeb-6cb0-4b4f-8483-74a9fd8fe506", false, "admin@admin.com" },
+                    { 2, 0, "84232b5e-9d84-4ca4-be95-2aff68fd3cb4", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "employee@employee.com", true, false, null, 0m, "Employee", "EMPLOYEE@EMPLOYEE.COM", "EMPLOYEE@EMPLOYEE.COM", "AQAAAAEAACcQAAAAEJzavrTHxmBHeeMNT4SD/Yukx7+3QQHXXmCScgMerDakdRdMSz4iwb+s0SKEV+tpDQ==", null, false, "ec72198f-b4c7-49c9-bd75-e1985c971254", false, "employee@employee.com" }
+                });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[] { 1, 1 });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { 2, 2 });
+
+            migrationBuilder.InsertData(
+                table: "Assignments",
+                columns: new[] { "Id", "CompletedAt", "CreatedAt", "Description", "DueDate", "Status", "Title", "UserId" },
+                values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 3, 12, 20, 29, 6, 687, DateTimeKind.Local).AddTicks(9172), "TestAssignmentDescription", new DateTime(2023, 3, 12, 21, 29, 6, 687, DateTimeKind.Local).AddTicks(9211), 0, "TestAssignment", 2 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

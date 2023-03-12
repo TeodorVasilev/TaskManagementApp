@@ -1,5 +1,4 @@
 ﻿using TaskManagmentApp.DAL.Models.Assignments;
-using TaskManagmentApp.DAL.ViewModels.User;
 
 namespace TaskManagmentApp.DAL.ViewModels.Assignment
 {
