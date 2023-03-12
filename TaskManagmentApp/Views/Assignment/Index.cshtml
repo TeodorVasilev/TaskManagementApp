@@ -50,7 +50,6 @@
                     else if (@User.IsInRole("Employee"))
                     {
                         <td>
-                            <a href="#" class="btn btn-primary btn-sm">Details</a>
                             @if (assignment.Status == 0)
                             {
                                 <a asp-action="complete" asp-controller="assignment" asp-route-id="@assignment.Id" class="btn btn-success btn-sm">Complete</a>
