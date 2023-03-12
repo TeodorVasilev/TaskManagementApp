@@ -24,9 +24,10 @@ namespace TaskManagmentApp.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var model = await this._userService.LoadRolesList();
+            return View(model);
         }
 
         [Authorize(Roles = "Admin")]

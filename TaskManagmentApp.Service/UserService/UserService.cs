@@ -190,5 +190,11 @@ namespace TaskManagmentApp.Service.UserService
 
             return list;
         }
+
+        public async Task<List<string>> LoadRolesList()
+        {
+            var roles = await _context.Roles.Select(r => r.Name).ToListAsync();
+            return roles;
+        }
     }
 }

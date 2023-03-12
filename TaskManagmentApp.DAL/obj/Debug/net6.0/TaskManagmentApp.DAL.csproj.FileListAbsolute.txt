@@ -11,3 +11,4 @@ C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\Ta
 C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\ref\TaskManagmentApp.DAL.dll
 C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.pdb
 C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.genruntimeconfig.cache
+C:\Users\npc13\Desktop\TaskManagmentApp\TaskManagmentApp.DAL\obj\Debug\net6.0\TaskManagmentApp.DAL.csproj.AssemblyReference.cache
