@@ -87,14 +87,14 @@ namespace TaskManagmentApp.Service.UserService
             };
 
             var password = Guid.NewGuid().ToString().Substring(0, 8);
-            password += "Aa1!";
+            password += "?Aa1";
 
             var result = await _userManager.CreateAsync(user, password);
             string message = "";
 
             if (result.Succeeded)
             {
-                message = $"The password for user {user.UserName} is: {password}. Keep the password as it cannot be recovered.";
+                message = $"The password for user {user.UserName} is: {password} Keep the password as it cannot be recovered.";
                 await this._userManager.AddToRoleAsync(user, formData.Role);
             }
 
